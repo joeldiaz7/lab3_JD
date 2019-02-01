@@ -9,6 +9,7 @@ public class Lab3 {
     static String login;
     static String contraseña;
     static String usuario;
+    static int cont = 0;
 
     public static void main(String[] args) {
         Connective_line.add(new Connective_Line());
@@ -26,10 +27,31 @@ public class Lab3 {
                     login = l.next();
                     if (login.equalsIgnoreCase("empresa")) {
                         Connective_line.add(new Empresa());
+                        System.out.print("Ingrese correo: ");
+                        usuario = l.next();
+                        System.out.print("Ingrese la contraseña: ");
+                        contraseña = l.next();
+                        ((Empresa) Connective_line.get(cont)).setContraseña(contraseña);
+                        ((Empresa) Connective_line.get(cont)).setNombre(usuario);
+
                     } else if (login.equalsIgnoreCase("administrador")) {
                         Connective_line.add(new Administradores());
+                        System.out.print("Ingrese correo: ");
+                        usuario = l.next();
+                        System.out.print("Ingrese la contraseña: ");
+                        contraseña = l.next();
+                        ((Administradores) Connective_line.get(cont)).setContaseña(contraseña);
+                        ((Administradores) Connective_line.get(cont)).setNombre_usuario(usuario);
+
                     } else if (login.equalsIgnoreCase("freelance")) {
                         Connective_line.add(new Freelance());
+                        System.out.print("Ingrese correo: ");
+                        usuario = l.next();
+                        System.out.print("Ingrese la contraseña: ");
+                        contraseña = l.next();
+                        ((Freelance) Connective_line.get(cont)).setContraseña(contraseña);
+                        ((Freelance) Connective_line.get(cont)).setNombre(usuario);
+
                     } else {
                         System.out.println("Login invalido");
                     }//Fin del if del login de cada tipo
