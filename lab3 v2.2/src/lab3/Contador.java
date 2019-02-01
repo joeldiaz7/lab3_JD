@@ -52,7 +52,6 @@ public class Contador extends Freelance{
 
     public String getHobbies() {
         return hobbies;
-        //hioalaaaaa
     }
 
     public void setHobbies(String hobbies) {
