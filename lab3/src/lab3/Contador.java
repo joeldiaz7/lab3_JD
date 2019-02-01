@@ -1,17 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab3;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author jason
- */
-public class Contador extends Freelance{
+public class Contador extends Freelance {
+
     private ArrayList<String> proyectos = new ArrayList();
     private String uni;
     private boolean inscripcion;
@@ -62,13 +54,12 @@ public class Contador extends Freelance{
     @Override
     public String toString() {
         String ins;
-        if (inscripcion){
+        if (inscripcion) {
             ins = "Inscrito";
         } else {
             ins = "No está inscrito";
         }
         return "Proyectos: " + proyectos + "\nUniversidad: " + uni + "\nInscripcion del colegio de peritos mercantiles: " + ins + "\nHobbies: " + hobbies;
     }
-    
-    
+
 }
