@@ -18,6 +18,13 @@ public class Lab3 {
             int op = l.nextInt();
             switch (op) {
                 case 2:
+                    System.out.println("Desarrolador web");
+                    Connective_line.add(new Connective_Line());
+                    System.out.println("Fotografo");
+                    System.out.println("Deseñador grafico");
+                    System.out.println("Medioas Audiovusuales");
+                    System.out.println("MArketing");
+                    System.out.println("Contador");
                     break;
             }
         }//Fin del while del menu
