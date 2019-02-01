@@ -24,6 +24,28 @@ public class Lab3 {
             System.out.print("Ingrese una opcion: ");
             int op = l.nextInt();
             switch (op) {
+                case 3:
+                    System.out.print("Ingrese posicion a eliminar: ");
+                    pos = l.nextInt();
+                    System.out.print("Ingrese correo: ");
+                    usuario = l.next();
+                    System.out.print("Ingrese contraseña: ");
+                    contraseña = l.next();
+                    if (((Empresa) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
+                            && ((Empresa) Connective_line.get(pos)).getCorreo().equalsIgnoreCase(usuario)) {
+                        Connective_line.remove(pos);
+                    } else if (((Administradores) Connective_line.get(pos)).getContaseña().equalsIgnoreCase(contraseña)
+                            && ((Administradores) Connective_line.get(pos)).getNombre_usuario().equalsIgnoreCase(usuario)) {
+                        Connective_line.remove(pos);
+                    } else if (((Freelance) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
+                            && ((Freelance) Connective_line.get(pos)).getNombre().equalsIgnoreCase(usuario)) {
+                        Connective_line.remove(pos);
+                    } else {
+                        System.out.println("Alguno de los parametros no es valido");
+                    }
+                    System.out.println("");
+                    System.out.println("");
+                    break;
                 case 2:
                     System.out.print("Quien desea login: ");
                     login = l.next();
@@ -67,6 +89,7 @@ public class Lab3 {
                         ((Freelance) Connective_line.get(cont)).setNombre(usuario);
                         System.out.print("Ingrese proyecto a visualizar(usar _ como espacios): ");
                         proyecto = l.next();
+
                         if (proyecto.equalsIgnoreCase("proyecto_web")) {
                             ((Desarrollador_web) Connective_line.get(cont)).getLenguaje();
                             System.out.println(((Freelance) Connective_line.get(cont)).getEmpresa().get(cont).getProyecto());
@@ -105,6 +128,7 @@ public class Lab3 {
                     usuario = l.next();
                     System.out.print("Ingrese contraseña: ");
                     contraseña = l.next();
+
                     if (((Empresa) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
                             && ((Empresa) Connective_line.get(pos)).getCorreo().equalsIgnoreCase(usuario)) {
                         Connective_line.remove(pos);
@@ -115,7 +139,7 @@ public class Lab3 {
                             && ((Freelance) Connective_line.get(pos)).getNombre().equalsIgnoreCase(usuario)) {
                         Connective_line.remove(pos);
                     } else {
-                        System.out.println("Aluno de los argumentos no son los correctos");
+                        System.out.println("Alguno de los argumentos no son los correctos");
                     }
                     System.out.println("");
                     System.out.println("");
