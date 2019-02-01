@@ -11,6 +11,7 @@ public class Lab3 {
     static String usuario;
     static int cont = 0;
     static String proyecto;
+    static int pos;
 
     public static void main(String[] args) {
         Connective_line.add(new Connective_Line());
@@ -97,7 +98,32 @@ public class Lab3 {
                     System.out.println("");
                     System.out.println("");
                     break;
-            }
+                case 4:
+                    System.out.print("Ingrese posicion a eliminar: ");
+                    pos = l.nextInt();
+                    System.out.print("Ingrese correo: ");
+                    usuario = l.next();
+                    System.out.print("Ingrese contraseña: ");
+                    contraseña = l.next();
+                    if (((Empresa) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
+                            && ((Empresa) Connective_line.get(pos)).getCorreo().equalsIgnoreCase(usuario)) {
+                        Connective_line.remove(pos);
+                    } else if (((Administradores) Connective_line.get(pos)).getContaseña().equalsIgnoreCase(contraseña)
+                            && ((Administradores) Connective_line.get(pos)).getNombre_usuario().equalsIgnoreCase(usuario)) {
+                        Connective_line.remove(pos);
+                    } else if (((Freelance) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
+                            && ((Freelance) Connective_line.get(pos)).getNombre().equalsIgnoreCase(usuario)) {
+                        Connective_line.remove(pos);
+                    } else {
+                        System.out.println("Aluno de los argumentos no son los correctos");
+                    }
+                    System.out.println("");
+                    System.out.println("");
+                    break;
+                default:
+                    System.out.println("Opcion no valida\n");
+                    System.out.println("");
+            }//Fin del switch del menu
             System.out.print("¿Volver al menu?1.-Si,2.-No: ");
             r = l.nextInt();
         }//Fin del while del menu
