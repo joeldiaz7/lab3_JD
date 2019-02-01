@@ -33,13 +33,13 @@ public class Lab3 {
                     contraseña = l.next();
                     if (((Empresa) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
                             && ((Empresa) Connective_line.get(pos)).getCorreo().equalsIgnoreCase(usuario)) {
-                        Connective_line.remove(pos);
+                        
                     } else if (((Administradores) Connective_line.get(pos)).getContaseña().equalsIgnoreCase(contraseña)
                             && ((Administradores) Connective_line.get(pos)).getNombre_usuario().equalsIgnoreCase(usuario)) {
-                        Connective_line.remove(pos);
+                        
                     } else if (((Freelance) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
                             && ((Freelance) Connective_line.get(pos)).getNombre().equalsIgnoreCase(usuario)) {
-                        Connective_line.remove(pos);
+                        
                     } else {
                         System.out.println("Alguno de los parametros no es valido");
                     }
