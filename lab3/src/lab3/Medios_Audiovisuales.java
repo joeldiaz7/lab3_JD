@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package lab3;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author jason
- */
+
 public class Medios_Audiovisuales extends Freelance{
     private ArrayList<String> proyectos = new ArrayList();
     private String marca;

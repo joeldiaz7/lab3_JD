@@ -12,6 +12,11 @@ public class Lab3 {
     static int cont = 0;
     static String proyecto;
     static int pos;
+    static String mod;
+    static String mod2;
+    static String mod3;
+    static String mod4;
+    static String mod5;
 
     public static void main(String[] args) {
         Connective_line.add(new Connective_Line());
@@ -33,13 +38,63 @@ public class Lab3 {
                     contraseña = l.next();
                     if (((Empresa) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
                             && ((Empresa) Connective_line.get(pos)).getCorreo().equalsIgnoreCase(usuario)) {
-                        
-                    } else if (((Administradores) Connective_line.get(pos)).getContaseña().equalsIgnoreCase(contraseña)
-                            && ((Administradores) Connective_line.get(pos)).getNombre_usuario().equalsIgnoreCase(usuario)) {
-                        
+
                     } else if (((Freelance) Connective_line.get(pos)).getContraseña().equalsIgnoreCase(contraseña)
                             && ((Freelance) Connective_line.get(pos)).getNombre().equalsIgnoreCase(usuario)) {
-                        
+                        System.out.print("Que desea modificar(usar _ como espacios): ");
+                        mod = l.next();
+                        System.out.println("");
+                        if (mod.equalsIgnoreCase("deseñador_web")) {
+                            System.out.print("Ingrese lenguaje: ");
+                            mod2 = l.next();
+                            System.out.print("Ingrese Idioma: ");
+                            mod4 = l.next();
+                            System.out.print("Ingrese Universidad: ");
+                            mod3 = l.next();
+                            ((Desarrollador_web) Connective_line.get(pos)).setLenguaje(mod2);
+                            ((Desarrollador_web) Connective_line.get(pos)).setIdioma(mod4);
+                            ((Desarrollador_web) Connective_line.get(pos)).setUni(mod3);
+                            System.out.println("");
+                        } else if (mod.equalsIgnoreCase("fotografo")) {
+                            System.out.print("Ingrese camara: ");
+                            mod2 = l.next();
+                            System.out.print("Ingrese numero marca: ");
+                            mod3 = l.next();
+                            ((Fotografo) Connective_line.get(pos)).setCamara(mod2);
+                            ((Fotografo) Connective_line.get(pos)).setNombreMarca(mod3);
+                            System.out.println("");
+                        } else if (mod.equalsIgnoreCase("diseñador_grafico")) {
+                            System.out.print("Ingrese hobbies: ");
+                            mod2 = l.next();
+                            System.out.println("Ingrese universidad: ");
+                            mod3 = l.next();
+                            ((Desñador_grafico) Connective_line.get(pos)).setHobbies(mod2);
+                            ((Desñador_grafico) Connective_line.get(pos)).setUni(mod3);
+                            System.out.println("");
+                        } else if (mod.equalsIgnoreCase("medios_audiovisuales")) {
+                            System.out.print("Ingrese camara: ");
+                            mod2 = l.next();
+                            System.out.print("Ingrese numero marca: ");
+                            mod3 = l.next();
+                            ((Medios_Audiovisuales) Connective_line.get(pos)).setCamara(mod2);
+                            ((Medios_Audiovisuales) Connective_line.get(pos)).setMarca(mod3);
+                            System.out.println("");
+                        } else if (mod.equalsIgnoreCase("marketing")) {
+                            System.out.print("Ingrese red social: ");
+                            mod2 = l.next();
+                            ((Marketing) Connective_line.get(pos)).setRedSocial(mod2);
+                            System.out.println("");
+                        } else if (mod.equalsIgnoreCase("contador")) {
+                            System.out.print("Ingrese hobbies: ");
+                            mod2 = l.next();
+                            System.out.println("Ingrese universidad: ");
+                            mod3 = l.next();
+                            ((Contador) Connective_line.get(pos)).setHobbies(mod2);
+                            ((Contador) Connective_line.get(pos)).setUni(mod3);
+                            System.out.println("");
+                        } else {
+                            System.out.println("Opcion de modificar empresa no valida");
+                        }//Fin del if de las modificaciones de la empresa
                     } else {
                         System.out.println("Alguno de los parametros no es valido");
                     }
@@ -91,20 +146,26 @@ public class Lab3 {
                         proyecto = l.next();
 
                         if (proyecto.equalsIgnoreCase("proyecto_web")) {
-                            ((Desarrollador_web) Connective_line.get(cont)).getLenguaje();
-                            System.out.println(((Freelance) Connective_line.get(cont)).getEmpresa().get(cont).getProyecto());
+                            for (int i = 0; i < Connective_line.size(); i++) {
+                                ((Desarrollador_web) Connective_line.get(i)).getLenguaje();
+                                System.out.println(((Freelance) Connective_line.get(i)).getEmpresa().get(i).getProyecto());
+                            }//FIn del for que muestra los proyectos webs
                             System.out.println("");
                             System.out.println("");
 
                         } else if (proyecto.equalsIgnoreCase("proyecto_publicitario")) {
-                            ((Proyecto_Publicitario) Connective_line.get(cont)).getFreelance();
-                            System.out.println(((Freelance) Connective_line.get(cont)).getEmpresa().get(cont).getProyecto());
+                            for (int i = 0; i < Connective_line.size(); i++) {
+                                ((Desarrollador_web) Connective_line.get(i)).getLenguaje();
+                                System.out.println(((Freelance) Connective_line.get(i)).getEmpresa().get(i).getProyecto());
+                            }//FIn del for que muestra los proyectos webs
                             System.out.println("");
                             System.out.println("");
 
                         } else if (proyecto.equalsIgnoreCase("proyecto_comercial")) {
-                            ((Proyecto_Comercial) Connective_line.get(cont)).getFreelance();
-                            System.out.println(((Freelance) Connective_line.get(cont)).getEmpresa().get(cont).getProyecto());
+                            for (int i = 0; i < Connective_line.size(); i++) {
+                                ((Desarrollador_web) Connective_line.get(i)).getLenguaje();
+                                System.out.println(((Freelance) Connective_line.get(i)).getEmpresa().get(i).getProyecto());
+                            }//FIn del for que muestra los proyectos webs
                             System.out.println("");
                             System.out.println("");
 
