@@ -1,9 +1,12 @@
 package lab3;
 
+import java.util.ArrayList;
+
 public class Administradores extends Persona {
 
     private String nombre_usuario;
     private String contaseña;
+    private ArrayList<Ingresos> ingresos;
 
     public Administradores() {
         super();
@@ -30,9 +33,17 @@ public class Administradores extends Persona {
         this.contaseña = contaseña;
     }
 
+    public ArrayList<Ingresos> getIngresos() {
+        return ingresos;
+    }
+
+    public void setIngresos(ArrayList<Ingresos> ingresos) {
+        this.ingresos = ingresos;
+    }
+
     @Override
     public String toString() {
-        return super.toString() + "nombre_usuario=" + nombre_usuario + ", contase\u00f1a=" + contaseña + '}';
+        return super.toString() + "nombre_usuario=" + nombre_usuario + ", contase\u00f1a=" + contaseña + ", ingresos=" + ingresos + '}';
     }
 
 }

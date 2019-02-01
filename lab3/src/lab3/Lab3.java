@@ -42,7 +42,12 @@ public class Lab3 {
                         contraseña = l.next();
                         ((Administradores) Connective_line.get(cont)).setContaseña(contraseña);
                         ((Administradores) Connective_line.get(cont)).setNombre_usuario(usuario);
-
+                        for (int i = 0; i < Connective_line.size(); i++) {
+                            System.out.println(((Administradores) Connective_line.get(i)).getIngresos().get(i));
+                        }//Fin del for que mustras los ingresos
+                        cont++;
+                        System.out.println("");
+                        System.out.println("");
                     } else if (login.equalsIgnoreCase("freelance")) {
                         Connective_line.add(new Freelance());
                         System.out.print("Ingrese correo: ");
@@ -51,10 +56,13 @@ public class Lab3 {
                         contraseña = l.next();
                         ((Freelance) Connective_line.get(cont)).setContraseña(contraseña);
                         ((Freelance) Connective_line.get(cont)).setNombre(usuario);
-
+                        System.out.println("");
+                        System.out.println("");
                     } else {
-                        System.out.println("Login invalido");
+                        System.out.println("Login invalido\n");
                     }//Fin del if del login de cada tipo
+                    System.out.println("");
+                    System.out.println("");
                     break;
             }
             System.out.print("¿Volver al menu?1.-Si,2.-No: ");
